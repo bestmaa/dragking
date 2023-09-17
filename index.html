@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <!-- <script src="check.js"></script> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <h2>Drag Area</h2>
+    <div id="drag-area" style="border: 1px solid black; width: 500px; height: 300px; margin-left: 100px;"> </div>
+    <h3> Drag Item</h3>
+    <img src="./icon.png" class="drag-item" id="oko" alt="" data-id="1" width="60px" srcset="" />
+    <img src="./icon.png" class="drag-item" id="oko" alt="" data-id="2" width="60px" srcset="" />
+    <img src="./icon.png" class="drag-item" id="oko" alt="" data-id="3" width="60px" srcset="" />
+    <img src="./icon.png" class="drag-item" id="oko" alt="" data-id="4" width="60px" srcset="" />
+    <button>To get all the data look into the console</button>
+
+
+
+    <script>
+
+        var drag = new Drag("#drag-area", ".drag-item")
+        drag.start()
+        // drag.getconsoleXY()
+        document.querySelector("button").addEventListener("click", () => {
+            console.log(drag.getAllIdAndXY());
+
+        })
+
+    </script>
+</body>
+
+</html>
